@@ -1,0 +1,2 @@
+# VisEngineeringGuide
+This guide documents best practices in visualization engineering.
