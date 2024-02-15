@@ -74,3 +74,5 @@ Notice that multiple words could be in the same line
 
 ![example_hex](./imgs/example-sfc.png "Example 2")
 
+## Author
+Sam, ytlee@ucdavis.edu
