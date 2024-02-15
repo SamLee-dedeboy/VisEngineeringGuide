@@ -11,10 +11,12 @@ I have a **responsive** parent div whose height is decided by its parent (`grand
 </div>
 ```
 The intuition is simply to use `flex` and `overflow-y`, but surprisingly this will not work.
-<div style="display: flex; column-gap: 5px;">
-<div style="display: flex; flex-direction: column; width: 100%">
+
+<img src="./imgs/example-1.png" alt="drawing" align="right" width="40%" height="auto" />
+
 For example, in the figure, the upper part is a utility panel with some buttons and controllers, then at the bottom, I have a `document list` that should take up the remaining space.
 We could use this simple HTML to demonstrate the  structure:
+
 
 ```html
 <div class="container">
@@ -38,12 +40,7 @@ Our previous intuition can be expressed as:
 
 This CSS will **NOT** work because `overflow-y: scroll` requires the element to have a `max-height` specified. However, we have a *dynamic* max height here: the max height of the scroll panel is dependent on how much space is left in the container.
 
-</div>
 
-<div style="">
-    <img src="./imgs/example-1.png" alt="drawing" />
-</div>
-</div>
 
 ## Solution
 The trick is to implicitly set `max-height` with `position: absolute`.
