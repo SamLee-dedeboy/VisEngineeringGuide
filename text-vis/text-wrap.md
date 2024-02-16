@@ -68,11 +68,11 @@ svg.selectAll("text")
 
 ## Example Usages:
 ### Example 1
-![example_hex](./imgs/example-hex.png "Example 1")
+![example_hex](./imgs/text-wrap-example-hex.png "Example 1")
 ### Example 2 
 Notice that multiple words could be in the same line
 
-![example_hex](./imgs/example-sfc.png "Example 2")
+![example_hex](./imgs/text-wrap-example-sfc.png "Example 2")
 
 ## Author
 Sam, ytlee@ucdavis.edu
