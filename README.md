@@ -10,7 +10,7 @@ This guide documents best practices in visualization engineering.
 ### [**HTML/CSS**](html-css/README.md) (empty)
 ### [**JavaScript/TypeScript**](javascript-typescript/README.md) (empty)
 ### [**UI Frameworks**](UI-frameworks/README.md) (empty)
-### [**LLM**](llm/README.md) (empty)
+### [**LLM**](llm/README.md) 
 ### [**Scalability**](scalability/README.md) (empty)
 ### [**Colors**](colors/README.md)
 # How to contribute
