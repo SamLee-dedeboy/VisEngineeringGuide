@@ -1,6 +1,7 @@
 # Text Wrap in svg
-`text` tags in svg does not support line break natively.
-To add line breaks, one has to wrap multiple `tspan` inside a `text` tag like so:
+
+`text` tags in svg does not support line break natively. To add line breaks, one has to wrap multiple `tspan` inside a `text` tag like so:
+
 ```html
 <text>
     <tspan> first line </tspan>
@@ -8,8 +9,9 @@ To add line breaks, one has to wrap multiple `tspan` inside a `text` tag like so
     <tspan> third line </tspan>
 </text>
 ```
-In most cases, we want **automatic** line breaks for things like labels or tooltips.
-The below function handles this exact requirement:
+
+In most cases, we want **automatic** line breaks for things like labels or tooltips. The below function handles this exact requirement:
+
 ```javascript
 // text longer than `width` will be in next line
 function wrap(text, width) {
@@ -50,9 +52,10 @@ function wrap(text, width) {
     text.selectAll("tspan").attr("y", parseFloat(y) - em_to_px / 2 * lineHeight * (line_num - 1) / 2)
 });
 }
-``` 
+```
 
 An example using this function:
+
 ```javascript
 svg.selectAll("text")
     .data(data)
@@ -67,12 +70,17 @@ svg.selectAll("text")
 ```
 
 ## Example Usages:
+
 ### Example 1
-![example_hex](./imgs/text-wrap-example-hex.png "Example 1")
-### Example 2 
+
+![example\_hex](../../text-vis/imgs/text-wrap-example-hex.png)
+
+### Example 2
+
 Notice that multiple words could be in the same line
 
-![example_hex](./imgs/text-wrap-example-sfc.png "Example 2")
+![example\_hex](../../text-vis/imgs/text-wrap-example-sfc.png)
 
 ## Author
+
 Sam, ytlee@ucdavis.edu

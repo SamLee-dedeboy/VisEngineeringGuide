@@ -1,17 +1,28 @@
-# VisEngineeringGuide
-This guide documents best practices in visualization engineering.
+---
+description: This guide documents best practices in visualization engineering.
+---
 
-# Motivation
-> A lot of people candidly just don't have time for the front-end industries bullshit. <br> -- Rich Harris (creator of Svelte)
+# VisEngineering Guide
 
-# Directories
-### [**Responsive Layout**](responsive-layout/README.md)
-### [**Text Visualization**](text-vis/README.md)
-### [**HTML/CSS**](html-css/README.md) (empty)
-### [**JavaScript/TypeScript**](javascript-typescript/README.md) (empty)
-### [**UI Frameworks**](UI-frameworks/README.md) (empty)
-### [**LLM**](llm/README.md) 
-### [**Scalability**](scalability/README.md) (empty)
-### [**Colors**](colors/README.md)
-# How to contribute
+## Motivation
 
+> A lot of people candidly just don't have time for the front-end industries bullshit.\
+> \-- Rich Harris (creator of Svelte)
+
+## Directories
+
+#### [**Responsive Layout**](readme/responsive-layout/)
+
+#### [**Text Visualization**](readme/text-vis/)
+
+####
+
+#### [**UI Frameworks**](readme/ui-frameworks/) (empty)
+
+#### [**LLM**](readme/llm/)
+
+#### [**Scalability**](readme/scalability/) (empty)
+
+#### [**Colors**](readme/colors/)
+
+## How to contribute
