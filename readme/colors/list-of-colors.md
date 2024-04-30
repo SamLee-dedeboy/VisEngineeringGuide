@@ -34,7 +34,7 @@ const colors = [
 
 <img src="../../.gitbook/assets/file.excalidraw.svg" alt="The corresponding colors, left to right" class="gitbook-drawing">
 
-<table><thead><tr><th></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td>turquoise (medium-light)</td><td>#8dd3c7</td><td></td></tr><tr><td>lavender</td><td>#bebada</td><td></td></tr><tr><td>salmon</td><td>#fb8072</td><td></td></tr><tr><td> cyan-blue (medium-light)</td><td>#80b1d3</td><td></td></tr><tr><td>pastel orange</td><td>#fdb462</td><td></td></tr></tbody></table>
+<table><thead><tr><th></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td>turquoise (medium-light)</td><td>#8dd3c7</td><td></td></tr><tr><td>lavender</td><td>#bebada</td><td></td></tr><tr><td>salmon</td><td>#fb8072</td><td></td></tr><tr><td> cyan-blue (medium-light)</td><td>#80b1d3</td><td></td></tr><tr><td>pastel orange</td><td>#fdb462</td><td></td></tr><tr><td>yellow-green</td><td>#b3de69</td><td></td></tr><tr><td>pink</td><td>#fccde5</td><td></td></tr><tr><td>light-gray</td><td>#d9d9d9</td><td></td></tr><tr><td>magenta (medium-light)</td><td>#bc80bd</td><td></td></tr><tr><td>tea-green (light)</td><td>#ccebc5</td><td></td></tr></tbody></table>
 
 ### Author
 
