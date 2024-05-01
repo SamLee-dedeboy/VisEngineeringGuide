@@ -43,22 +43,15 @@ Our previous intuition can be expressed as:
 
 This CSS will **NOT** work because `overflow-y: scroll` requires the element to have a `max-height` specified. However, we have a _dynamic_ max height here: the max height of the scroll panel is dependent on how much space is left in the container. You may want to add `max-height: 100%` to `scroll-panel`, I assure you this will not work.
 
-### Solution
+### Solution(s)
+
+There are two solutions to this problem, one is intuitive but with more lines of code, and the other is weird but short (and possibly a hack in CSS?)
+
+
+
+### The intuitive solution
 
 The trick is to implicitly set `max-height` with `position: absolute`. Here's how:
-
-First, we need to identify the element that _could_ overflow, which will be wrapped inside `scroll-panel`
-
-```html
-<div class="container">
-    <div class="control-panel"/>
-    <div class="scroll-panel">
-        <div> a div with very large height </div> 
-    </div>
-</div>
-```
-
-Then we use `position: absolute` combined with `top: 0` and `bottom: 0` to make `scroll-panel` scrollable.
 
 ```css
 .container {
@@ -79,6 +72,29 @@ Then we use `position: absolute` combined with `top: 0` and `bottom: 0` to make 
     right: 0;
 }
 ```
+
+Basically, we use `position: absolute` combined with `top: 0` and `bottom: 0` to tell the browser what the max height of the scroll panel is. I find this solution to be logical and I always prefer this solution, even though it introduces more lines of code.
+
+### The weird (but short) solution
+
+The weird one is surprisingly simple:  make the scroll panel grow like usual and add a **default height** to the scroll panel like this:
+
+```css
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.control-panel {
+    /* do nothing */
+}
+.scroll-panel {
+    flex-grow: 1;
+    overflow-y: scroll;
+    height: 1px; /* It doesn't matter how much the height is */
+}
+```
+
+This solution does not make any sense at all: the `height: 1px` does not actually set the scroll panel to be 1px high, but it works. It is likely that this solution exploits some CSS bugs, therefore note that **it may not work in the future.**
 
 ### Author
 
