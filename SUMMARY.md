@@ -4,7 +4,7 @@
   * [Text Visualization](readme/text-vis/README.md)
     * [Text Highlight](readme/text-vis/text-highlight.md)
     * [Text Wrap in svg](readme/text-vis/text-wrap.md)
-    * [ScrollIntoView](readme/text-vis/scrollintoview.md)
+    * [Scroll Into View](readme/text-vis/scroll-into-view.md)
     * [ChatGPT-like text effect](readme/text-vis/chatgpt-like-text-effect.md)
   * [UI Frameworks (empty)](readme/ui-frameworks/README.md)
     * [Svelte](readme/ui-frameworks/svelte.md)
