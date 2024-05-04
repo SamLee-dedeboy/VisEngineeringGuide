@@ -29,9 +29,10 @@ function add_utility_button({
   }) {
     const utility_button = parent.append("g").attr("class", class_name);
     const animation_scale_factor = 1.1;
+    // button rect and handlers
     utility_button
       .append("rect")
-      .classed("utility-button", true)
+      .attr("class", "utility-button-rect")
       .attr("x", x)
       .attr("y", y)
       .attr("width", width)
@@ -47,7 +48,9 @@ function add_utility_button({
         d3.select(this).attr("fill", activated? activated_color: "lightgray");
       })
       .on("mouseout", function () {
-        d3.select(this).attr("stroke-width", 1).attr("fill", () => {
+        d3.select(this)
+          .attr("stroke-width", 1)
+          .attr("fill", () => {
             if(stateless) return deactivated_color;
             const activated = d3.select(this).attr("fill") === activated_color;
             return activated ? activated_color : deactivated_color
@@ -85,12 +88,11 @@ function add_utility_button({
         if (!stateless) {
           d3.select(this.parentNode)
             .select("text")
-            .attr(
-              "fill",
-              activated ? deactivated_text_color : activated_text_color
-            );
+            .attr("fill",activated ? deactivated_text_color : activated_text_color);
         }
       });
+      
+    // label
     utility_button
       .append("text")
       .attr("x", x + width / 2)
