@@ -2,6 +2,7 @@
 
 * [VisEngineering Guide](README.md)
   * [Manipulating SVGs](readme/manipulating-svgs/README.md)
+    * [Adding Highlight Effects](readme/manipulating-svgs/adding-highlight-effects.md)
     * [SVG button](readme/manipulating-svgs/svg-button.md)
   * [Text Visualization](readme/text-vis/README.md)
     * [Text Highlight](readme/text-vis/text-highlight.md)
