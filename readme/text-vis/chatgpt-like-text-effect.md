@@ -83,3 +83,7 @@ function make_delay(text) {
 
 &#x3C;div class="message-body">{delayed_text}&#x3C;/div>
 </code></pre>
+
+### Author
+
+Sam Yu-Te Lee, ytlee@ucdavis.edu

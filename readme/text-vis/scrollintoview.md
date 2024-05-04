@@ -29,3 +29,7 @@ setTimeout(() => {
 What it would look like (for some reason the GIF is in slow-mo):&#x20;
 
 <figure><img src="../../.gitbook/assets/Screen Recording 2024-04-30 at 22.52.18.gif" alt=""><figcaption></figcaption></figure>
+
+### Author
+
+Sam Yu-Te Lee, ytlee@ucdavis.edu

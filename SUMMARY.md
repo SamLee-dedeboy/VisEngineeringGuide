@@ -1,6 +1,8 @@
 # Table of contents
 
 * [VisEngineering Guide](README.md)
+  * [Manipulating SVGs](readme/manipulating-svgs/README.md)
+    * [SVG button](readme/manipulating-svgs/svg-button.md)
   * [Text Visualization](readme/text-vis/README.md)
     * [Text Highlight](readme/text-vis/text-highlight.md)
     * [Text Wrap in svg](readme/text-vis/text-wrap.md)
