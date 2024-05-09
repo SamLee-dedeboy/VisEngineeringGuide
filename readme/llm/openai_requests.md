@@ -37,13 +37,14 @@ def request_gpt(client, messages, model="gpt-3.5-turbo-0125", format=None):
             response_format={ "type": "json_object" },
             temperature=0,
         )
+        return json.loads(response.choices[0].message.content)
     else:
         response = client.chat.completions.create(
             model=model,
             messages=messages,
             temperature=0,
         )
-    return response.choices[0].message.content
+        return response.choices[0].message.content
 ```
 
 List of available models: https://platform.openai.com/docs/models
@@ -55,6 +56,8 @@ Error handling is not a trivial thing as many errors could happen. You'll want t
 Here's an example that handles `RateLimitError`:
 
 ```python
+from openai import RateLimitError
+from json import JSONDecodeError
 def request_gpt(client, messages, model='gpt-3.5-turbo-0125', format=None):
     try:
         if format == "json":
@@ -64,13 +67,18 @@ def request_gpt(client, messages, model='gpt-3.5-turbo-0125', format=None):
                 response_format={ "type": "json_object" },
                 temperature=0.5,
             )
+            return json.loads(response.choices[0].message.content)
         else:
             response = client.chat.completions.create(
                 model=model,
                 messages=messages,
                 temperature=0.5,
             )
-        return response.choices[0].message.content
+            return response.choices[0].message.content
+    except JSONDecodeError as e:
+         print(e)
+         time.sleep(5)
+         return request_chatgpt(client, messages, model, format)
     except RateLimitError as e:
         print(e)
         time.sleep(5)
