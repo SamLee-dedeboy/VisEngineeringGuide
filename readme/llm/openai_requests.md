@@ -137,7 +137,7 @@ def get_embedding(text, model="text-embedding-3-small"):
 
 For data-processing prompts, it's very time-saving to execute the prompts with multi-threading as the bottleneck is usually Network I/O.
 
-### Code
+### Multi-thread Prompting
 
 ```python
 import concurrent
@@ -154,6 +154,22 @@ def multithread_prompts(client, prompts, model="gpt-3.5-turbo-0125"):
 ```
 
 **Note**: The returned list of result is guaranteed to have the same order as `prompts`
+
+### Multi-thread Embedding
+
+<pre class="language-python"><code class="lang-python">import concurrent
+from tqdm import tqdm
+<strong>def multithread_embeddings(client, texts):
+</strong>    l = len(texts)
+    with tqdm(total=l) as pbar:
+        executor = concurrent.futures.ThreadPoolExecutor(max_workers=100)
+        futures = [executor.submit(get_embedding, client, text) for text in texts]
+        for _ in concurrent.futures.as_completed(futures):
+            pbar.update(1)
+    concurrent.futures.wait(futures)
+    return [future.result() for future in futures]
+
+</code></pre>
 
 ### Usage
 
