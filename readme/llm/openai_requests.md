@@ -29,7 +29,7 @@ client=OpenAi(api_key=api_key)
 A basic code for making OpenAI GPT Requests (without error handling):
 
 ```python
-def request_chatgpt(client, messages, model="gpt-3.5-turbo-0125", format=None):
+def request_gpt(client, messages, model="gpt-3.5-turbo-0125", format=None):
     if format == "json":
         response = client.chat.completions.create(
             model = model,
@@ -55,7 +55,7 @@ Error handling is not a trivial thing as many errors could happen. You'll want t
 Here's an example that handles `RateLimitError`:
 
 ```python
-def request_chatgpt(client, messages, model='gpt-3.5-turbo-0125', format=None):
+def request_gpt(client, messages, model='gpt-3.5-turbo-0125', format=None):
     try:
         if format == "json":
             response = client.chat.completions.create(
@@ -102,7 +102,7 @@ LLMs all have a limit for context length. For example, `gpt-3.5-turbo-0125` has 
 
 ```python
 import tiktoken
-def request_chatgpt(client, messages, model='gpt-3.5-turbo-0125', format=None):
+def request_gpt(client, messages, model='gpt-3.5-turbo-0125', format=None):
     model = "gpt-3.5-turbo-1106"
     enc = tiktoken.encoding_for_model(model)
     text = json.dumps(messages)
@@ -142,11 +142,11 @@ For data-processing prompts, it's very time-saving to execute the prompts with m
 ```python
 import concurrent
 from tqdm import tqdm
-def multithread_prompts(client, prompts, model="gpt-3.5-turbo-0125"):
+def multithread_prompts(client, prompts, model="gpt-3.5-turbo-0125", response_format=None):
     l = len(prompts)
     with tqdm(total=l) as pbar:
         executor = concurrent.futures.ThreadPoolExecutor(max_workers=100)
-        futures = [executor.submit(request_chatgpt_gpt4, client, prompt, model) for prompt in prompts]
+        futures = [executor.submit(request_gpt, client, prompt, model, response_format) for prompt in prompts]
         for _ in concurrent.futures.as_completed(futures):
             pbar.update(1)
     concurrent.futures.wait(futures)
@@ -182,7 +182,9 @@ def summarization_prompt_template(article):
     messages = [
         {
             "role": "system",
-            "content": """You are a summarization system. The user will give you an article. Summarize it with three sentences.
+            "content": """You are a summarization system. 
+                The user will give you an article. 
+                Summarize it with three sentences.
             """
         },
         {
