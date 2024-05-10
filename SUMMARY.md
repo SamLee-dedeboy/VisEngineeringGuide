@@ -22,3 +22,4 @@
   * [Scalability (empty)](readme/scalability/README.md)
     * [performance-scalability](readme/scalability/performance-scalability.md)
     * [visual-scalability](readme/scalability/visual-scalability.md)
+  * [Useful Vis Libraries](readme/useful-vis-libraries.md)
