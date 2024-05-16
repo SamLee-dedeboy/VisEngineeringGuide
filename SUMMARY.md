@@ -12,6 +12,7 @@
   * [UI Frameworks (empty)](readme/ui-frameworks/README.md)
     * [Svelte](readme/ui-frameworks/svelte.md)
     * [Vue](readme/ui-frameworks/vue.md)
+    * [React](readme/ui-frameworks/react.md)
   * [Colors](readme/colors/README.md)
     * [List of Colors](readme/colors/list-of-colors.md)
     * [RGB to RGBA](readme/colors/rgb-to-rgba.md)
@@ -23,3 +24,4 @@
     * [performance-scalability](readme/scalability/performance-scalability.md)
     * [visual-scalability](readme/scalability/visual-scalability.md)
   * [Useful Vis Libraries](readme/useful-vis-libraries.md)
+* [Dimensionality Reduction](dimensionality-reduction.md)
