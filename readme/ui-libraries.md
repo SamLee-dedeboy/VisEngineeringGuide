@@ -1,4 +1,4 @@
-# UI Frameworks
+# UI Libraries
 
 1. Tailwindcss (for all)
 2. Flowbite (for all)
