@@ -1,8 +1,9 @@
 # Table of contents
 
 * [VisEngineering Guide](README.md)
+  * [System Architecture](readme/system-architecture.md)
   * [Manipulating SVGs](readme/manipulating-svgs/README.md)
-    * [Handling Highlight Effects](readme/manipulating-svgs/handling-highlight-effects.md)
+    * [Handling Highlight Effects](readme/manipulating-svgs/adding-highlight-effects.md)
     * [SVG button](readme/manipulating-svgs/svg-button.md)
   * [Dimensionality Reduction](dimensionality-reduction.md)
   * [Text Visualization](readme/text-vis/README.md)
