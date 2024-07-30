@@ -18,7 +18,7 @@
     * [React](readme/ui-frameworks/react.md)
   * [Colors](readme/colors/README.md)
     * [List of Colors](readme/colors/list-of-colors.md)
-    * [RGB to RGBA](readme/colors/rgb-to-rgba.md)
+    * [Adding opacity to RBG Hex](readme/colors/rgb-to-rgba.md)
   * [Large Language Model](readme/llm/README.md)
     * [OpenAI Requests](readme/llm/openai\_requests.md)
   * [Responsive Layout](readme/responsive-layout/README.md)
